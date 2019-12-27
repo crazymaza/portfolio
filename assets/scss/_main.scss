@@ -84,4 +84,23 @@
             }
         }
     }
+    //599px
+    @include for-phone-only {
+        .first-text {
+            h1 { 
+                font-size: 30px;
+                letter-spacing: 10px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+            .first-p {
+                font-size: 20px;
+                &::after {
+                    left: 35%;
+                }
+            }
+        }
+    }
 }

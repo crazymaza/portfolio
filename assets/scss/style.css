@@ -334,6 +334,22 @@ header nav .menu__btn {
   }
 }
 
+@media (max-width: 599px) {
+  .first .first-text h1 {
+    font-size: 30px;
+    letter-spacing: 10px;
+  }
+  .first .first-text h3 {
+    font-size: 20px;
+  }
+  .first .first-text .first-p {
+    font-size: 20px;
+  }
+  .first .first-text .first-p::after {
+    left: 35%;
+  }
+}
+
 .about {
   max-width: 1280px;
   display: -ms-grid;
@@ -373,6 +389,23 @@ header nav .menu__btn {
   .about .about-group {
     -ms-grid-columns: (50%)[2];
         grid-template-columns: repeat(2, 50%);
+  }
+}
+
+@media (max-width: 599px) {
+  .about .about-group {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .about .about-item {
+    width: 70%;
+    height: auto;
+  }
+  .about .section-title-text {
+    font-size: 20px;
+    line-height: 40px;
+    max-height: 100%;
+    margin-bottom: 10px;
   }
 }
 
@@ -427,12 +460,12 @@ header nav .menu__btn {
   margin-bottom: 10px;
 }
 
-.services .services-item {
+.services .services-group .services-item {
   max-width: 164px;
   max-height: 143px;
 }
 
-.services .services-img {
+.services .services-group .services-img {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   -ms-grid-column: 2;
@@ -447,6 +480,26 @@ header nav .menu__btn {
   }
   .services .services-img {
     display: none;
+  }
+}
+
+@media (max-width: 599px) {
+  .services {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "h2" "title" "services";
+  }
+  .services .services-group {
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .services .services-group .services-item {
+    max-width: 90%;
+    max-height: auto;
   }
 }
 
@@ -571,6 +624,17 @@ header nav .menu__btn {
   }
 }
 
+@media (max-width: 599px) {
+  .mywork .section-title-text {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+  .mywork .mywork-items {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 .contact {
   padding-top: 15px;
 }
@@ -667,6 +731,15 @@ header nav .menu__btn {
   }
   .contact-form .inp-email {
     max-width: 500px;
+  }
+}
+
+@media (max-width: 599px) {
+  .contact-form .inp-name {
+    max-width: 300px;
+  }
+  .contact-form .inp-email {
+    max-width: 300px;
   }
 }
 
