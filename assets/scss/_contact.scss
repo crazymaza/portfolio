@@ -1,0 +1,76 @@
+.contact-form {
+    background-color: $black;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-areas:
+        "name-inp"
+        "email"
+        "textarea"
+        "submit";
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .inp-name {
+        grid-area: name-inp;
+        width: 637px;
+        height: 31px;
+        background-color: inherit;
+        color: $white;
+        text-transform: uppercase;
+        text-align: center;
+        border: none;
+        border-bottom: 1px solid $warm-grey;
+        outline: none;
+    }
+
+    .inp-email {
+        grid-area: email;
+        width: 637px;
+        height: 31px;
+        background-color: inherit;
+        color: $white;
+        text-transform: uppercase;
+        text-align: center;
+        border: none;
+        border-bottom: 1px solid $warm-grey;
+        outline: none;
+    }
+
+    .textarea {
+        grid-area: textarea;
+        resize: none;
+        background-color: inherit;
+        color: $white;
+        border: none;
+        border: 1px solid $warm-grey;
+        outline: none;
+        padding: 5px;
+    }
+
+    .btn {
+        grid-area: submit;
+        justify-self: center;
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: $warm-grey;
+        border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: lighten($color: $warm-grey, $amount: 15%);
+    }
+}

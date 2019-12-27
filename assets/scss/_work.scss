@@ -1,0 +1,106 @@
+.mywork {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+        "h2"
+        "title"
+        "img-wrap";
+
+    h2 {
+        grid-area: h2;
+    }
+
+    .section-title-text {
+        grid-area: title;
+    }
+
+    .mywork-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+
+        .mywork-item {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            grid-area: img-wrap;
+
+            img {
+                grid-area: img;
+                max-width: 100%;
+            }
+
+            .item-layer_bottom {
+                display: block;
+            }
+
+            .item-layer_top {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.6);
+                color: #fff;
+                padding: 15px;
+                -moz-transition: all 0.4s ease-in-out 0s;
+                -webkit-transition: all 0.4s ease-in-out 0s;
+                -ms-transition: all 0.4s ease-in-out 0s;
+                transition: all 0.4s ease-in-out 0s;
+            }
+
+            &:hover .item-layer_top,
+            &.active .item-layer_top {
+                opacity: 1;
+            }
+
+            .item-layer-text {
+                text-align: center;
+                font-size: 18px;
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -moz-transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+
+            .item-layer-text_mobile {
+                font-size: 15px;
+                border-top: 1px solid rgb(179, 179, 179);
+                /* for old browsers */
+                border-top: 1px solid rgba(179, 179, 179, 0.7);
+                margin-top: 5px;
+                padding-top: 2px;
+                display: none;
+            }
+
+            &.active .item-layer-text_mobile {
+                display: block;
+            }
+
+            .item-layer_scale {
+                border-radius: 50%;
+                -moz-transform: scale(0);
+                -webkit-transform: scale(0);
+                -ms-transform: scale(0);
+                transform: scale(0);
+            }
+
+            &:hover .item-layer_scale,
+            &.active .item-layer_scale {
+                border-radius: 0%;
+                -moz-transform: scale(1);
+                -webkit-transform: scale(1);
+                -ms-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+    }
+}

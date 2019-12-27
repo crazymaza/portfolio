@@ -1,0 +1,16 @@
+footer {
+    height: 79px;
+    text-align: center;
+    line-height: 79px;
+    background-color: $black-two;
+    a {
+        color: lighten($black, 10%);
+        &:hover {
+            color: lighten($black, 30%);
+        }
+    }
+
+    @mixin for-tablet-landscape-up {
+        
+    }
+}
