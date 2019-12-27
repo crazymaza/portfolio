@@ -243,7 +243,7 @@ header nav .menu__btn {
 }
 
 .first {
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -351,6 +351,7 @@ header nav .menu__btn {
 .about .section-title-text {
   max-width: 874px;
   max-height: 99px;
+  padding: 0 10px 0 10px;
 }
 
 .section-wrapper {
@@ -376,7 +377,8 @@ header nav .menu__btn {
   grid-area: h2;
       justify-self: self-start;
   margin: 0;
-  padding-top: 50px;
+  padding-top: 60px;
+  margin-bottom: 35px;
 }
 
 .services .section-title-text {
@@ -386,7 +388,7 @@ header nav .menu__btn {
       justify-self: self-start;
   max-width: 470px;
   text-align: left;
-  margin-bottom: -50px;
+  margin-bottom: -30px;
   margin-top: -30px;
 }
 
@@ -400,6 +402,7 @@ header nav .menu__btn {
       grid-template-rows: 1fr 1fr;
   -ms-grid-columns: (50%)[2];
       grid-template-columns: repeat(2, 50%);
+  margin-bottom: 10px;
 }
 
 .services .services-item {
@@ -412,12 +415,8 @@ header nav .menu__btn {
   -ms-grid-row-span: 3;
   -ms-grid-column: 2;
   grid-area: img;
-}
-
-@media (max-width: 900px) {
-  .services .services-img {
-    display: none;
-  }
+  width: 100%;
+  height: 100%;
 }
 
 .mywork {
@@ -426,6 +425,7 @@ header nav .menu__btn {
   display: -ms-grid;
   display: grid;
       grid-template-areas: "h2" "title" "img-wrap";
+  padding-top: 15px;
 }
 
 .mywork h2 {
@@ -446,6 +446,7 @@ header nav .menu__btn {
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
+  padding: 0 10px 0 10px;
 }
 
 .mywork .mywork-items .mywork-item {
@@ -526,6 +527,17 @@ header nav .menu__btn {
   border-radius: 0%;
   -webkit-transform: scale(1);
   transform: scale(1);
+}
+
+@media (max-width: 900px) {
+  .mywork .section-title-text {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+.contact {
+  padding-top: 15px;
 }
 
 .contact-form {
