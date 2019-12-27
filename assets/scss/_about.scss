@@ -25,4 +25,10 @@
         max-height: 99px;
         padding: 0 10px 0 10px;
     }
+    //600px
+    @include for-tablet-portrait-up {
+        .about-group {
+            grid-template-columns: repeat(2, 50%);
+        }
+    }
 }

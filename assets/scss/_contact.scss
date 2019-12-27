@@ -76,4 +76,15 @@
     ::-webkit-scrollbar-thumb:hover {
         background: lighten($color: $warm-grey, $amount: 15%);
     }
+
+    //600px
+    @include for-tablet-landscape-up {
+        .inp-name {
+            max-width: 500px;
+        }
+        .inp-email {
+            max-width: 500px;
+        }
+    }
+
 }

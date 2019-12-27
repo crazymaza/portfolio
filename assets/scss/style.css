@@ -319,6 +319,21 @@ header nav .menu__btn {
   }
 }
 
+@media (max-width: 600px) {
+  .first .first-text h1 {
+    font-size: 40px;
+  }
+  .first .first-text h3 {
+    font-size: 20px;
+  }
+  .first .first-text .first-p {
+    font-size: 20px;
+  }
+  .first .first-text .first-p::after {
+    left: 39%;
+  }
+}
+
 .about {
   max-width: 1280px;
   display: -ms-grid;
@@ -352,6 +367,13 @@ header nav .menu__btn {
   max-width: 874px;
   max-height: 99px;
   padding: 0 10px 0 10px;
+}
+
+@media (max-width: 600px) {
+  .about .about-group {
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
+  }
 }
 
 .section-wrapper {
@@ -417,6 +439,15 @@ header nav .menu__btn {
   grid-area: img;
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 600px) {
+  .services {
+        grid-template-areas: "h2 h2" "title title" "services services";
+  }
+  .services .services-img {
+    display: none;
+  }
 }
 
 .mywork {
@@ -534,6 +565,10 @@ header nav .menu__btn {
     margin-bottom: 0;
     margin-top: 0;
   }
+  .mywork .mywork-items {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
 }
 
 .contact {
@@ -624,6 +659,15 @@ header nav .menu__btn {
 
 .contact-form ::-webkit-scrollbar-thumb:hover {
   background: #afafaf;
+}
+
+@media (max-width: 900px) {
+  .contact-form .inp-name {
+    max-width: 500px;
+  }
+  .contact-form .inp-email {
+    max-width: 500px;
+  }
 }
 
 footer {
